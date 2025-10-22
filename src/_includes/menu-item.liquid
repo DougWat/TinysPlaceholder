@@ -1,0 +1,12 @@
+{% assign pricesArr = prices | split : "," %}
+<div class="menu-item">
+    <p class="name">{{ name }}</p>
+    {% unless noDots %}
+        <div class="ellipses"></div>
+    {% endunless %}
+    <p class="price">
+        {% for price in pricesArr %}
+            <span>{{ price }}</span>
+        {% endfor %}
+    </p> 
+</div>

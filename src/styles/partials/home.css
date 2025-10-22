@@ -1,0 +1,207 @@
+#Home{
+    --padding: 40px;
+    background-color: $tiny-red;
+    min-height: 100vh;
+    padding: var(--padding);
+    .internal{
+        width: 100%;
+        min-height: calc(100vh - var(--padding) * 2);
+        background-color: rgb(33, 33, 33);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding:40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        gap:40px;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:40px;
+        position: relative;
+    }
+    .copy-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .logo{
+        max-width: 300px;
+    }
+    .seperator{
+        height: 300px;
+        width: 1px;
+        background-color: #ffffff90;
+    }
+    .times{
+        text-align: center;
+        color:$text-light;
+        h3{
+            margin-bottom: 6px;
+            font-weight: 400;
+            font-family: $font-body;
+        }
+        h4{
+            font-weight: 300;
+            font-family: $font-body;
+        }
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 400px;
+    }
+    .menu-item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text-light;
+        gap: 12px;
+        p{
+            font-size: 1.05rem;
+        }
+        .name{
+            width: min-content;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        .ellipses{
+            flex-grow: 1;
+            flex-shrink: 1;
+            height: 1px;
+            border: 1px dashed $text-light;
+            margin-bottom: 2px;;
+        }
+        .price{
+            flex-shrink: 0;
+            span{
+                flex-shrink: 0;
+                text-align: center;
+                display: inline-block;
+                width: 50px;
+            }
+        }
+    }
+    .menu-seperator{
+        width: 100%;
+        height: 1px;
+        background-color: $text-light;
+    }
+    .address{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap:12px;
+    }
+    .menu-additional{
+        margin-top: 20px;;
+        color:$text-light;
+        h5{
+            font-weight: 300;;
+        }
+    }
+    .address-item{
+            display: flex;
+            align-items: center;
+            gap:6px;
+            font-size: 1.2rem;
+            color:$text-light;
+            transition: color 300ms;
+            &:hover{
+                color:$tiny-red;
+            }
+        .icon{
+            width: 20px;
+            color:$tiny-red;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span{
+            position: relative;
+            display: inline-block;
+            &:after{
+                content:"";
+                display: block;
+                position: absolute;
+                bottom:-4px;
+                width: 100%;
+                background-color: $tiny-red;
+                height: 1px;
+            }
+        }
+    }
+    .mobile-address{
+        display: none;
+    }
+    @media (--lg){
+        --padding: 20px;
+        .internal{
+            padding:20px;
+        }
+        .content{
+            flex-direction: column;
+        }
+        .seperator{
+            display: none;
+        }
+        .cartopia{
+            display: none !important;
+        }
+        .container.address{
+            display: none;
+        }
+        .mobile-address{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            .address-item{
+                font-size: 1rem;
+            }
+        }
+        .menu-additional{
+            margin-top: 30px;
+            h5{
+                font-size: 1.4rem;
+                text-align: center;
+            }
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            width: auto;
+        }
+        .menu-item{
+            position: relative;
+            .ellipses{
+                width: 100%;
+                position: absolute;
+                bottom:-8px;
+                opacity: .5;
+            }
+        } 
+    }
+}
+
+#HomeHeroBG{
+    z-index: 0;
+    pointer-events: none;
+    path{
+        fill:none;
+        stroke: #00000040;
+    }
+}

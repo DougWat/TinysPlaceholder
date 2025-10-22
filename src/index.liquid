@@ -1,0 +1,44 @@
+---
+layout: layout.liquid
+title: Tiny's Coffee | Portland's Best Coffee
+---
+<section id="Home">
+    <div class="internal">
+        <div id="HomeHeroBG" class="full-abs">
+            {% include 'svganim/herobg'%}
+        </div>
+        <div class="container content">
+            <div class="copy-block">
+                <div class="logo">
+                    <img class="image-contain" src="{{ '/assets/images/logo.png' | url }}">
+                </div>
+                <div class="times">
+                    <h3>Open Everyday</h3>
+                    <h4>7am - 5pm</h4>
+                </div>
+            </div>
+            <div class="mobile-address">
+                {% include 'contact' %}
+            </div>
+            <div class="seperator">
+            </div>
+            <div class="menu-block">
+                <div class="menu">
+                    {% include 'menu-item', name:"Coffee Menu", prices:"8oz,12oz,16oz", noDots:true %}
+                    <div class="menu-seperator"></div>
+                    {% include 'menu-item', name:"Coffee", prices:"$3.00,$3.50,$4.00" %}
+                    {% include 'menu-item', name:"Coffee For Here", prices:"-,$3.00,-" %}
+                    {% include 'menu-item', name:"Coffee", prices:"$3.00,$3.50,$4.00" %}
+                    {% include 'menu-item', name:"Coffee", prices:"$3.00,$3.50,$4.00" %}
+                    {% include 'menu-item', name:"Coffee", prices:"$3.00,$3.50,$4.00" %}
+                </div>
+                <div class="menu-additional">
+                    <h5>+ Seasonal Drinks & Amazing Food!</h5>
+                </div>
+            </div>
+        </div>
+        <div class="container address">
+            {% include 'contact' %}
+        </div>
+    </div>
+</section>
