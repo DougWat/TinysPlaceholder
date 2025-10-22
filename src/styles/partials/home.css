@@ -79,6 +79,9 @@
         }
         .price{
             flex-shrink: 0;
+            width: 150px;
+            display: flex;
+            justify-content: center;
             span{
                 flex-shrink: 0;
                 text-align: center;
