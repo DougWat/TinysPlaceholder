@@ -1,5 +1,5 @@
 {
-  "name": "Tinys",
+  "name": "TinysPlaceholder",
   "version": "1.0.0",
   "scripts": {
     "build": "SET NODE_ENV=production npm-run-all build:*",
@@ -7,7 +7,7 @@
     "github-build": "npm-run-all build:*",
     "clean": "rm -rf _site",
     "build:postcss": "postcss src/styles/styles.css -o dist/assets/styles/styles.css",
-    "build:eleventy": "eleventy --pathprefix 'Tinys'",
+    "build:eleventy": "eleventy --pathprefix 'TinysPlaceholder'",
     "dev:postcss": "postcss src/styles/styles.css -o dist/assets/styles/styles.css -w",
     "dev:eleventy": "npx @11ty/eleventy --serve"
   },
